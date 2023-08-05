@@ -1,0 +1,25 @@
+{
+	"name": "namaste-react",
+	"version": "1.0.0",
+	"description": "This is namaste react by swamy dyapa",
+	"main": "App.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/swamydyapa/NamasteReact.git"
+	},
+	"keywords": [
+		"react"
+	],
+	"author": "swamy dyapa",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/swamydyapa/NamasteReact/issues"
+	},
+	"homepage": "https://github.com/swamydyapa/NamasteReact#readme",
+	"devDependencies": {
+		"parcel": "^2.9.3"
+	}
+}
