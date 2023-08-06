@@ -1,19 +1,9 @@
-/**
-* 	<div id="parent">
-        <div id="child">
-            <h1>h1 heading</h1>
-            <h2>h2 heading</h2>
-        </div>
-        <div id="child2">
-            <h1>h1 heading</h1>
-            <h2>h2 heading</h2>
-        </div>
-		</div>
-*/
+import React from "react";
+import ReactDOM from "react-dom";
 
 const parent = React.createElement("div", { id: "parent" }, [
 	React.createElement("div", { id: "child" }, [
-		React.createElement("h1", {}, "h1 from child1"),
+		React.createElement("h1", {}, "hi iam h1 from child1"),
 		React.createElement("h2", {}, "h2 from child1"),
 	]),
 	React.createElement("div", { id: "child2" }, [
