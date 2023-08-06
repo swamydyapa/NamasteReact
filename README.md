@@ -1,7 +1,7 @@
 
 # Namaste React 🚀
 
-# Parcel
+## Parcel
 
 - Creates a Dev build
 - Creates a local server (Hosts in the browser)
