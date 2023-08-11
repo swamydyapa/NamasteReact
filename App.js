@@ -15,6 +15,15 @@ const HeadingComponent = () => {
 		<div className="container">
 			{title}
 			<h1 className="heading">Heading Component🚀🚀</h1>
+			{/* components can also be called as a fn }*/}
+
+			{/* {FooterComponent()} */}
+
+			{/* components can also be called as a tag when it doesn't have children}*/}
+			{/* {<FooterComponent />} */}
+
+			{/* components can also be called as a tag when it has children}*/}
+			{/* <FooterComponent></FooterComponent> */}
 			{footerElem}
 		</div>
 	);

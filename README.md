@@ -1,33 +1,162 @@
+# Chapter 03 - Laying the Foundation Coding Assignment
 
-# Namaste React 🚀
 
-## Parcel
+## Q: Create a `Nested header Element` using `React.createElement`(h1,h2,h3 inside a div with class "title")
+```
+const header = React.createElement(
+  "div",
+  {
+    className: "Title",
+    key: "title",
+  },
+  [
+    React.createElement(
+      "h1",
+      {
+        key: "h1",
+      },
+      "This is h1 Tag"
+    ),
+    React.createElement(
+        "h2",
+        {
+          key: "h2",
+        },
+        "This is h2 Tag"
+      ),
+      React.createElement(
+        "h3",
+        {
+          key: "h3",
+        },
+        "This is h3 Tag"
+      )
+  ]
+);
+```
 
-- Creates a Dev build
-- Creates a local server (Hosts in the browser)
-- Does HMR (Hot Module Replacement)
-  - When you make a change in a file, Parcel automatically updates your code in the browser, for ex: like live Server.
-- It does the `HMR` by using an algorithm called
-  File Watching Algorithm which is written in `C++`.
-- It Caches files when saved in order to facilitate faster builds.
-- Image Optimization.
-- It minifies , bundles and compresses the files for the production build.
-- Consistent Hashing.
-- Code Splitting.
-- Differential Bundling
-  - Basically it creates different bundles for older browsers and modern browsers. Since most of the older browsers don't support latest javascript  by providing polyfills.
-  - When you use  `<script type="module">` , Parcel automatically generates a `nomodule` fallback for old browsers as well, depending on your browser targets.
 
-    ```html
+## Q: Create the `same element using JSX`
+```
+const header = (
+  <div className="Title" key="title">
+    <h1 key="h1">This is h1 tag</h1>
+    <h2 key="h2">This is h2 tag</h2>
+    <h3 key="h3">This is h3 tag</h3>
+  </div>
+);
+```
 
-    ​<script type="module" src="app.c9a6fe.js"></script>
-    <script nomodule="" src="app.f7d631.js"></script>
-    ```
-- Provides Diagnostics
-  - If we make an error in our code or configuration, Parcel displays beautiful diagnostics in your terminal and in the browser with a syntax highlighted code frame pointing to the exact location where the error occurred.
-- Error Handling.
-- HTTPs
-  - Allows us to host pages using https during  development.By using the  `--https` CLI flag.
-- Tree Shaking
-  - When we import and export modules in JavaScript, most of the time there is unused code floating around. Tree shaking or dead code elimination means that unused modules will not be included in the bundle during the build process.
-- Different  dev and prod bundles.
+
+## Q: Create a `functional component of the same with JSX`
+```
+const Header = () => {
+  return (
+    <div className="Title" key="title">
+      <h1 key="h1">This is h1 tag</h1>
+      <h2 key="h2">This is h2 tag</h2>
+      <h3 key="h3">This is h3 tag</h3>
+    </div>
+  );
+};
+```
+
+
+## Q: Pass `attribute into the tag in JSX`
+```
+const Header = () => {
+  return (
+    <div className="Title" key="title">
+      <h1 style={{color:"blue"}} key="h1">This is h1 tag</h1>
+      <h2 style={{color:"palevioletred"}} key="h2">This is h2 tag</h2>
+      <h3 style={{color:"green"}} key="h3">This is h3 tag</h3>
+    </div>
+  );
+};
+```
+
+
+## Q: `Composition of Component` (Add a component inside another)
+```
+const AnotherComponent = function(){
+    return <h2> This is Another Component</h2>
+}
+
+const Header = () => {
+  return (
+    <div className="Title" key="title">
+      <h1 style={{color:"blue"}} key="h1">This is h1 tag</h1>
+      <h2 style={{color:"palevioletred"}} key="h2">This is h2 tag</h2>
+      <AnotherComponent/>
+      <h3 style={{color:"green"}} key="h3">This is h3 tag</h3>
+    </div>
+  );
+};
+```
+
+
+## Q: `{TitleComponent()}` vs `{<TitleComponent/>}` vs `{<TitleComponent></TitleComponent>}` in JSX.
+```
+const element = <h1>This is React Element</h1>; // This is React element or {TitleComponent}
+
+const TitleElement = () => {
+  return <h2 style={{ color: "red" }}>This Title Element</h2>;
+}; // This is Title Component
+
+const Header = () => {
+  return (
+    <div className="Title" key="title">
+      {/* This is {TitleComponent()} */}
+      {TitleElement()}
+      <h1 style={{ color: "blue" }} key="h1">
+        This is h1 tag
+      </h1>
+      {/* This is {<TitleComponent/>} */}
+      <TitleElement/>
+      <h2 style={{ color: "palevioletred" }} key="h2">
+        This is h2 tag
+      </h2>
+      {/* This is {<TitleComponent></TitleComponent>}*/}
+      <TitleElement></TitleElement>
+      <h3 style={{ color: "green" }} key="h3">
+        This is h3 tag
+      </h3>
+    </div>
+  );
+};
+```
+
+
+## Q: Create a `Header Component from scratch` using `Functional Component with JSX`
+- Add a Logo on Left
+- Add a search bar in middle
+- Add User icon on right
+- Add CSS to make it look nice
+
+```
+const Header = () => {
+    return(
+        <>
+        <header className="header">
+            <div className="left">
+                <img src={logo} alt="Logo" />
+            </div>
+            <div className="center">
+                <input className="input" type="text" placeholder="Search anything you want..."/>
+                <button type="submit">Submit</button>
+            </div>
+            <div className="right">
+                <img src={userIcon} alt="User Icon"/>
+            </div>
+        </header>
+        </>
+    )
+}
+```
+
+## References:
+- [Babel](https://babeljs.io/)
+- [Attribute Type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-type)
+- [JS Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+- [Babel Playground](https://babeljs.io/repl#)
+- [React without JSX](https://reactjs.org/docs/react-without-jsx.html)
