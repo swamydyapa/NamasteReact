@@ -2,8 +2,6 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import logo from "./logo.png";
-// import userIcon from "./user icon.png";
 
 // Q: Create a Nested header Element using React.createElement(h1,h2,h3 inside a div with class "title")
 const header = React.createElement(
