@@ -5,7 +5,7 @@
 - JSX stands for **JavaScript XML**.
 - It is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file.
 - JSX places them in the DOM without any `createElement()` and/or `appendChild()` methods.
-- JSX converts HTML tags into React Elements.
+- JSX converts `HTML` tags into `React Elements`.
 - JSX and React are two separate things.
 - JSX is a syntax extension, while React is a JavaScript library.
 - Using JSX you can write **Js Expressions** inside curly braces `{ }`.
@@ -105,7 +105,7 @@ Considering if the `TitleComponent` is a component
 
   Components can also be called/rendered as a `self closing tag` when it doesn't have any **children** or **content**.
 
-  The return value will be a `JSX` element, which is a **React Element** .
+  The return value will be a `JSX` element , which is a **React Element** .
 
 - `<TitleComponent></TitleComponent>` :
 
