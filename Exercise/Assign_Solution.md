@@ -115,7 +115,7 @@ Considering if the `TitleComponent` is a component
 
   ```js
   <TitleComponent>
-    <FirstChildComponent />
-    <SecondChildComponent />
+  	<FirstChildComponent />
+  	<SecondChildComponent />
   </TitleComponent>
   ```
